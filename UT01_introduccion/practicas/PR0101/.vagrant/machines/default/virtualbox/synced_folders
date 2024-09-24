@@ -1,0 +1,1 @@
+{"virtualbox":{"/data":{"guestpath":"/data","hostpath":"E:/Clase/ASO/UT01_introduccion/practicas/PR0101/data","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"E:/Clase/ASO/UT01_introduccion/practicas/PR0101","disabled":false,"__vagrantfile":true}}}
