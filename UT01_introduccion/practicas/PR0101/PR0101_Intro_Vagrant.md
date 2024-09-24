@@ -77,4 +77,4 @@ Y al ver los cambios en la máquina también se han realizado correctamente
 
 ![img](img/confmv.png)
 
-[Volver](/UT01_introduccion/index.md)
+[Volver](../../index.md)
