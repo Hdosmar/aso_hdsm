@@ -1,0 +1,10 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+  # Configuración del Ubuntu Server
+  config.vm.define "ubuntuserver" do |ubuntuserver|
+    ubuntuserver.vm.box = "generic/ubuntu2204"
+    ubuntuserver.vm.network "private_network", ip: "192.168.1.10", hostonly: true
+  end
+end
