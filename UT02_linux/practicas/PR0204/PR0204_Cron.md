@@ -91,7 +91,7 @@ Oct 17 07:17:01 ubuntu2204.localdomain CRON[3630]: pam_unix(cron:session): sessi
     */15 1,2,3 * * * who > /tmp/test
 ```
 
-Cada 15 minutos durante las 1, 2, y 3 de la mañana mira los usuarios conectados y los redirije a ese archivo sobrescribiendo el contenido
+Cada 15 minutos durante las 1, 2, y 3 de la mañana mira los usuarios conectados y los redirige a ese archivo sobrescribiendo el contenido
 
 ## Indica la ruta del fichero crontab del sistema
 
