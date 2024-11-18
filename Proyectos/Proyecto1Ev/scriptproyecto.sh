@@ -39,7 +39,7 @@ then
                         # Una vez validado todo mira si el archivo está creado y si no lo está lo crea y le mete la cabecera del CSV
                         if [[ -e "$archivo.csv" ]]
                         then
-                                echo "\"ip\",\"mac\",\"so\",\"puerto\",\"servicio\"" > "$archivo.csv"
+                                echo "El archivo ya existe, no se sobreescribirán los datos"
                         else
                                 touch "$archivo.csv"
                                 echo "\"ip\",\"mac\",\"so\",\"puerto\",\"servicio\"" > "$archivo.csv"
@@ -50,18 +50,18 @@ then
                         24)
                                 for i in {1..254}
                                 do
-                                        if ping -W 1 -c 1 "$oct1.$oct2.$i.$c" > /dev/null 2>&1
+                                        if ping -W 1 -c 1 "$oct1.$oct2.$oct3.$i" > /dev/null 2>&1
                                         then
                                                 # Si contesta el ping guarda el TTL y le hace un arp -a para guardar la MAC
-                                                ttl=$(ping -W 1 -c 1 "$oct1.$oct2.$i.$c" | grep -o 'ttl=[0-9]*' | cut -d '=' -f 2)
-                                                mac=$(arp -a "$oct1.$oct2.$i.$c" | awk -F ' ' '{print $4}')
+                                                ttl=$(ping -W 1 -c 1 "$oct1.$oct2.$oct3.$i" | grep -o 'ttl=[0-9]*' | cut -d '=' -f 2)
+                                                mac=$(arp -a "$oct1.$oct2.$oct3.$i" | awk -F ' ' '{print $4}')
 
                                                 # Lo muestra en pantalla
-                                                echo "El host $oct1.$oct2.$i.$c responde al ping"
+                                                echo "El host $oct1.$oct2.$oct3.$i responde al ping"
                                                 echo "  Mac = $mac"
 
                                                 # Guarda la ip en una variable para guardarla en el csv mas tarde
-                                                datos="$oct1.$oct2.$i.$c"
+                                                datos="$oct1.$oct2.$oct3.$i"
 
                                                 # Comprueba si el host es linux o windows mediante el TTL
                                                 if [[ $ttl -gt 64 ]]
@@ -76,7 +76,7 @@ then
                                                 # Realiza un netcat a la ip y rango de puertos que le has pasado por parámetro
                                                 for ((b=pi; b<=pfin; b++))
                                                 do
-                                                    if nc -zv "$oct1.$oct2.$i.$c" $b 2>/dev/null
+                                                    if nc -zv "$oct1.$oct2.$oct3.$i" $b 2>/dev/null
                                                     then
                                                         # Si el nc contesta entra al archivo tcp.csv y saca el servicio, acto seguido lo muestra en pantalla con el puerto
                                                         servicio=$(grep ",$b," tcp.csv | awk -F',' '{print $3}' | tr -d '"')
