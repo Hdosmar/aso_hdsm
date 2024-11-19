@@ -1,10 +1,10 @@
 # **Índice**
 
-        * :computer: **Funcionalidades** :computer:
-        * :hammer_and_wrench: **Requisitos** :hammer_and_wrench:
-        * :gear: **Código** :gear:
+        * 🖥️ **Funcionalidades** 🖥️
+        * 🛠️ **Requisitos** 🛠️
+        * ⚙️ **Código** ⚙️
 
-# :computer: **Funcionalidades** :computer:
+# 🖥️ **Funcionalidades** 🖥️
 
 ## Escaneo de red
 
@@ -27,13 +27,13 @@ Todos los datos como la MAC, puerto, SO, etc... los guarda en una variable que d
         * Compara el TTL y según aproximaciones determina el sistema operativo del equipo
         * El propio script valida todos y cada uno de los datos para la correcta ejecución del mismo, en caso de poner algo mal lo imprimirá por pantalla
 
-# :hammer_and_wrench: **Requisitos** :hammer_and_wrench:
+# 🛠️ **Requisitos** 🛠️
 
         * Necesitas tener el archivo tcp.csv en el mismo lugar de ejecución del script para que te saque el servicio del puerto
         * Necesitas tener las net-tools para que realice el arp -a y sacar la MAC
         * IMPORTANTE: La MAC del localhost no la va a sacar
 
-# :gear: **Código** :gear:
+# ⚙️ **Código** ⚙️
 
 Aquí tienes el código con comentarios explicado por trozos
 
