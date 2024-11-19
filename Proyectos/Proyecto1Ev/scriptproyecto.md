@@ -1,3 +1,42 @@
+# **Índice**
+
+        * :computer: **Funcionalidades** :computer:
+        * :hammer_and_wrench: **Requisitos** :hammer_and_wrench:
+        * :gear: **Código** :gear:
+
+# :computer: **Funcionalidades** :computer:
+
+## Escaneo de red
+
+Si le introduces una red con una máscara /8 /16 y /24 te realizará un escaneo de la red haciendo ping -w 1 -c 1 a todas las direcciones de la red, en caso de que te devuelva ping realizará mas funciones
+
+## Escaneo de puertos
+
+En caso de que devuelva ping el script realizará netcat a todos los puertos seleccionados en el parámetro, los que te devuelvan conexión de marcará el servicio
+
+## Recogida de datos
+
+Todos los datos como la MAC, puerto, SO, etc... los guarda en una variable que después empuja a un archivo.csv para la visualización de los datos
+
+## Otras funcionalidades
+
+        * En caso de que el ping devuelva conexión también se realizará un arp a a la ip para obtener la MAC
+        * En los parámetros te pedirá el nombre de un archivo que mira si existe y si no existe te lo crea, el archivo siempre es .csv
+        * Devuelve el tiempo que ha tardado en realizar el script
+        * Va presentando los datos por pantalla
+        * Compara el TTL y según aproximaciones determina el sistema operativo del equipo
+        * El propio script valida todos y cada uno de los datos para la correcta ejecución del mismo, en caso de poner algo mal lo imprimirá por pantalla
+
+# :hammer_and_wrench: **Requisitos** :hammer_and_wrench:
+
+        * Necesitas tener el archivo tcp.csv en el mismo lugar de ejecución del script para que te saque el servicio del puerto
+        * Necesitas tener las net-tools para que realice el arp -a y sacar la MAC
+        * IMPORTANTE: La MAC del localhost no la va a sacar
+
+# :gear: **Código** :gear:
+
+Aquí tienes el código con comentarios explicado por trozos
+
 ```bash
         #!/bin/bash
 
