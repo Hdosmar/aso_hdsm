@@ -6,8 +6,12 @@
 
    [PR0402_Intro_PWSH](./practicas/PR0402_Intro_PWSHII/PR0402_IntroPWSHII.md)
 
-# PR0403 : Pipeline en Powershell
+# PR0403: Pipeline en Powershell
 
    [PR0403_Pipeline_PWSH](./practicas/PR0403_Pipeline_PWSH/PR0403_Pipeline_PWSH.md)
+
+# PR0404: Administración remota del servidor
+
+   [PR0404](./practicas/PR0404_Adm_Rem/PR0404_Adm_Rem.md)
 
 [Volver](../index.md)
