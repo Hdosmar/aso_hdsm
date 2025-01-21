@@ -12,6 +12,6 @@
 
 # PR0404: Administración remota del servidor
 
-   [PR0404](./practicas/PR0404_Adm_Rem/PR0404_Adm_Rem.md)
+   [PR0404_Adm_Rem](./practicas/PR0404_Adm_Rem/PR0404_Adm_Rem.md)
 
 [Volver](../index.md)

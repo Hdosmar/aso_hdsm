@@ -16,6 +16,10 @@
    
    * [Windows Server](./UT04_wserver/index.md)
 
+5. UT05_Servicio de directorio en windows Server
+   
+   * [Windows Server](./UT05_wsdirserv/index.md)
+
 Proyecto primera evaluación
 
    * [Proyecto](./Proyectos/Proyecto1Ev/scriptproyecto.md)

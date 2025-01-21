@@ -1,4 +1,4 @@
-Instalamos el Winodws Server 2022 Core
+Instalamos el Windows Server 2022 Core
 
 Añadimos el adaptador solo anfitrión
 
