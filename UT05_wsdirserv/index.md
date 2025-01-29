@@ -4,6 +4,6 @@
 
 # PR0502: Aplicación de directivas
 
-   [PR0502_gpos](./practicas/PR0502_gpos/PR0501_gpos.md)
+   [PR0502_gpos](./practicas/PR0502_gpos/PR0502_gpos.md)
    
 [Volver](../index.md)
